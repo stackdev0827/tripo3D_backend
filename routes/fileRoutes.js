@@ -62,7 +62,7 @@ router.post('/projectbuild', async (req, res) => {
     console.log("project:", req.body)
 
     const fileUrl = `/uploads/${req.body.fileName}`;
-    const filePath = `D:/work_space/Real Jobs/New folder/tripo3D_API_integration/backend/uploads/${req.body.fileName}`;
+    const filePath = `D:/work_space/Real Jobs/New folder/tripo3D_API_integration/me/tripo3D_backend/uploads/${req.body.fileName}`;
     
     const imageToken = await uploadToTripo3D(filePath, req.body.fileName, req.body.mimeType);
     const taskId = await createTripo3DTask(imageToken, req.body.mimeType);
